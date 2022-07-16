@@ -76,6 +76,7 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
+
 MIDDLEWARE = [
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -167,21 +168,20 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CKEDITOR_UPLOAD_PATH = "uploads/"
 
-CONTACT_EMAIL = 'medicalinstruments16@gmail.com'
-ADMIN_EMAILS = ['khachatryansargis2000@gmail.com']
+CONTACT_EMAIL = os.environ.get('CONTACT_EMAIL')
+ADMIN_EMAILS = [os.environ.get('ADMIN_EMAIL')]
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = env('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_API_KEY')
+DEFAULT_FROM_EMAIL = CONTACT_EMAIL
+EMAIL_FROM = CONTACT_EMAIL
 
 # Allauth settings
 SITE_ID = 1
-
-DEFAULT_FROM_EMAIL = CONTACT_EMAIL
-EMAIL_FROM = CONTACT_EMAIL
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = 'account_login'
