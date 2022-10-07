@@ -77,13 +77,13 @@ python manage.py runserver
 Facebook authentication:\
 [Got o the Facebook for Developers login and add new app](https://developers.facebook.com/apps)\
 Then Click the button ```Tune``` under Login with Facebook\
-![img1](./media/README_screanshots/Screenshot_normname_1.png)\
+![img1](Screenshot_normname_1.png)\
 After that  Select WEB.\
 Enter your  host url here\
-![img2](./media/README_screanshots/img.png)\
+![img2](img.png)\
 then click save and continue.\
 Turn on work-mode for production server\
-![img3](./media/README_screanshots/Screenshotno.png)\
+![img3](Screenshotno.png)\
 this will take more additional steps.
 Click  Basic setting  and fill  ```privacy policy URL``` field.
 #### Step12.2:
@@ -91,7 +91,7 @@ Then go to the admin panel ```host:/admin``` and login with superuser login and 
 navigate to ```SOCIAL ACCOUNTS```>```Social applications```  click add and 
 fill fields. Example picture above. Your app id and secret key you can find inside your basic-setting\
 then click save.\
-![img4](./media/README_screanshots/img_1.png)
+![img4](img_1.png)
 ### Step13:
 LinkedIn authentication:
 [go to Linkdin Developer](https://developer.linkedin.com/) login and click ```My Apps``` creat a new app.\
